@@ -19,4 +19,4 @@ Xvfb :0 $DPI_OPTIONS -ac -screen 0 $XFB_SCREEN >> /logs/xvfb.log 2>&1 &
 sleep 2
 
 # finally we can run the VNC-Server based on our just started X-Server
-x11vnc -forever -passwd $VNC_PASSWORD -display :0
+x11vnc -forever -shared -passwd $VNC_PASSWORD -display :0
